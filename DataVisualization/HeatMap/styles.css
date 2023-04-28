@@ -1,0 +1,18 @@
+body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+svg {
+    background-color: lightskyblue;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.cell:hover {
+    fill: olive
+}

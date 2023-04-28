@@ -1,0 +1,59 @@
+#navbar {
+    position: fixed;
+    background-color:grey; 
+}
+
+header {
+    font-size: 24px;
+    padding: 10px 10px;
+}
+  
+  #primary {
+    width: 85%;
+    float: right;
+}
+
+  .nav-link {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+  .nav-title {
+    text-decoration: underline;
+}
+  
+  .nav-link:hover {
+    background-color: #3e8e41;
+}
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    main {width: 8.33%;}
+    main {width: 16.66%;}
+    main {width: 25%;}
+    main {width: 33.33%;}
+    main {width: 41.66%;}
+    main {width: 50%;}
+    main {width: 58.33%;}
+    main {width: 66.66%;}
+    main {width: 75%;}
+    main {width: 83.33%;}
+    main {width: 91.66%;}
+    main {width: 100%;}
+  }
+
+  .part-title {
+    padding: 10px 10px;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+  

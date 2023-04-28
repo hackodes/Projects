@@ -1,0 +1,17 @@
+body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+svg {
+    background-color: lightskyblue;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+circle:hover {
+    fill: beige;
+}

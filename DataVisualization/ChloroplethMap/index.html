@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3: Chloropleth Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<svg id="canvas"></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="script.js"></script>
+
+<body>
+
+    <svg id="legend" style="margin-top: -200px; margin-left:1000px" height="100" width="500">
+        <text x='20' y="20" style="font-weight: bold; text-decoration: underline;">Legend:</text>
+        <g>
+            <rect width='40' height='50' fill="#edf8fb" x="100" y="10"></rect>
+            <text x="95" y="75" style="font-size:12px">3%</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#ccece6" x="140" y="10"></rect>
+            <text x="130" y="75" style="font-size:12px">12%</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#99d8c9" x="180" y="10"></rect>
+            <text x="170" y="75" style="font-size:12px">21%</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#66c2a4" x="220" y="10"></rect>
+            <text x="210" y="75" style="font-size:12px">30%</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#41ae76" x="260" y="10"></rect>
+            <text x="250" y="75" style="font-size:12px">39%</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#238b45" x="300" y="10"></rect>
+            <text x="290" y="75" style="font-size:12px">48%</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#005824" x="340" y="10"></rect>
+            <text x="332" y="75" style="font-size:12px">57%</text>
+            <text x="368" y="75" style="font-size:12px">66%</text>
+        </g>
+
+    </svg>
+</body>
+
+</html>

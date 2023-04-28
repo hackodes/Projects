@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3: Heat Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<svg id="canvas"></svg>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="script.js"></script>
+
+<body>
+    <svg id="legend" style="margin-top: 10px; padding-bottom:-50px; margin-right:825px" height="100" width="500">
+        <text x='20' y="20" style="font-weight: bold; text-decoration: underline;">Legend:</text>
+        <g>
+            <rect width='40' height='50' fill="#fff5eb" x="100" y="10"></rect>
+            <text x="90" y="75" style="font-size:12px">2.8</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#fee6ce" x="140" y="10"></rect>
+            <text x="130" y="75" style="font-size:12px">3.9</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#fdd0a2" x="180" y="10"></rect>
+            <text x="170" y="75" style="font-size:12px">5.0</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#fdae6b" x="220" y="10"></rect>
+            <text x="210" y="75" style="font-size:12px">6.1</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#fd8d3c" x="260" y="10"></rect>
+            <text x="250" y="75" style="font-size:12px">7.2</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#f16913" x="300" y="10"></rect>
+            <text x="290" y="75" style="font-size:12px">8.3</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#d94801" x="340" y="10"></rect>
+            <text x="330" y="75" style="font-size:12px">9.5</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#a63603" x="380" y="10"></rect>
+            <text x="365" y="75" style="font-size:12px">10.6</text>
+        </g>
+        <g>
+            <rect width='40' height='50' fill="#7f2704" x="420" y="10"></rect>
+            <text x="406" y="75" style="font-size:12px">11.7</text>
+            <text x="443" y="75" style="font-size:12px">12.8</text>
+        </g>
+
+    </svg>
+</body>
+
+</html>

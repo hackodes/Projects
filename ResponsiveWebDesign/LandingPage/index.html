@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header id="header">
+        <img id="header-img" alt="logo" src="https://cdn.pixabay.com/photo/2018/05/21/12/37/logo-3418132_1280.png" />
+        <h1>Landing Page: </h1>
+        <nav id="nav-bar">
+            <a href="#video" class="nav-link">Features</a>
+            <a href="#form" class="nav-link">How It Works</a>
+            <a href="#header" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+    <div class="flex-container">
+        <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
+            <p class="text">Handcrafted,</p>
+            <p class="text">Home-made,</p>
+            <p class="text">Masterpieces...</p>
+            <input type="email" id="email" placeholder="Enter email address" required name="email">
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+    </div>
+    <div id="video-wrapper">
+        <iframe width="800" height="480" id="video" src="https://www.youtube.com/embed/x">
+        </iframe>
+    </div>
+
+</body>
+
+</html>

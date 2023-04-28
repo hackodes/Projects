@@ -1,0 +1,32 @@
+body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+svg {
+    background-color: lightskyblue;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+.bar {
+    background-color: aquamarine;
+    border-color: black;
+    fill: cornflowerblue
+}
+
+.bar:hover {
+    fill: lightcyan
+}
+
+#tooltip {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tick {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

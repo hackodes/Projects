@@ -1,0 +1,15 @@
+.bg-info {
+    background-color: #296E85 !important;
+  }
+
+  .bg-primary {
+    background-color: #43A6C6 !important;
+  }
+
+  .bg-warning {
+    background-color: #8AC7DB !important;
+  }
+
+  body {
+    background-color: #296E85;
+  }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3: Treemap Diagram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<svg id="canvas"></svg>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="script.js"></script>
+
+<body>
+
+    <svg id="legend" style="margin-top: -340px; margin-left:1350px; font-size:12px" height="340" width="225">
+        <text x='10' y="20" style="font-weight: bold; text-decoration: underline;">Legend:</text>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#a6cee3" x="10" y="50"></rect>
+            <text x="30" y="62" style="font-size:12px">Wii</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#1f78b4" x="90" y="50"></rect>
+            <text x="110" y="62" style="font-size:12px">DS</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#b2df8a" x="170" y="50"></rect>
+            <text x="190" y="62" style="font-size:12px">X360</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#33a02c" x="10" y="100"></rect>
+            <text x="30" y="112" style="font-size:12px">GB</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#fb9a99" x="90" y="100"></rect>
+            <text x="110" y="112" style="font-size:12px">PS3</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#e31a1c" x="170" y="100"></rect>
+            <text x="190" y="112" style="font-size:12px">NES</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#fdbf6f" x="10" y="150"></rect>
+            <text x="30" y="162" style="font-size:12px">PS2</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#ff7f00" x="90" y="150"></rect>
+            <text x="110" y="162" style="font-size:12px">3DS</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#cab2d6" x="170" y="150"></rect>
+            <text x="190" y="162" style="font-size:12px">PS4</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#6a3d9a" x="10" y="200"></rect>
+            <text x="30" y="212" style="font-size:12px">SNES</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#ffff99" x="90" y="200"></rect>
+            <text x="110" y="212" style="font-size:12px">PS</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#b15928" x="170" y="200"></rect>
+            <text x="190" y="212" style="font-size:12px">N64</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#8c510a" x="10" y="250"></rect>
+            <text x="30" y="262" style="font-size:12px">GBA</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#d8b365" x="90" y="250"></rect>
+            <text x="110" y="262" style="font-size:12px">XB</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#f6e8c3" x="170" y="250"></rect>
+            <text x="190" y="262" style="font-size:12px">PC</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#c7eae5" x="10" y="300"></rect>
+            <text x="30" y="312" style="font-size:12px">2600</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#5ab4ac" x="90" y="300"></rect>
+            <text x="110" y="312" style="font-size:12px">PSP</text>
+        </g>
+        <g>
+            <rect class='legend-item' width='15' height='15' fill="#01665e" x="170" y="300"></rect>
+            <text x="190" y="312" style="font-size:12px">XOne</text>
+        </g>
+    </svg>
+</body>
+
+</html>

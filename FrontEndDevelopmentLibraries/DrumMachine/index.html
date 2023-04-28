@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Machine</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+
+<body>
+    <div class="container text-center" id="drum-machine">
+        <h1 class="display-2 text-center mb-5">Drum Machine</h1>
+        <div id="display">
+            <div class="card">
+                <div class="card-body" id="string">Playing: NONE</div>
+            </div>
+        </div>
+        <button class="drum-pad btn-warning btn-lg" id="drum-0" onclick="playAudio(this)">
+            Q
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip" id="Q"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-1" onclick="playAudio(this)">
+            W
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" class="clip" id="W"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-2" onclick="playAudio(this)">
+            E
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" class="clip" id="E"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-3" onclick="playAudio(this)">
+            A
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" class="clip" id="A"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-4" onclick="playAudio(this)">
+            S
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" class="clip" id="S"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-5" onclick="playAudio(this)">
+            D
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" class="clip " id="D"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-6" onclick="playAudio(this)">
+            Z
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" class="clip" id="Z"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-7" onclick="playAudio(this)">
+            X
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" class="clip" id="X"></audio>
+        </button>
+        <button class="drum-pad btn-warning btn-lg" id="drum-8" onclick="playAudio(this)">
+            C
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3" class="clip" id="C"></audio>
+        </button>
+
+
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

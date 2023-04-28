@@ -1,0 +1,30 @@
+body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+svg {
+    margin-right: 250px;
+}
+
+#canvas {
+    background-color: black;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.tile-text {
+    font-size: 9px;
+}
+
+.tile:hover {
+    fill: yellow
+}
+
+#id {
+    background-color: white;
+}
