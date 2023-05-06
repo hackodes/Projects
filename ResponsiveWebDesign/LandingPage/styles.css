@@ -1,8 +1,13 @@
 #header {
-    background-color: lightblue;
+    background-color: navajowhite;
     border-radius: 60px;
     display: flex;
     justify-content: center;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: beige;
 }
 
 nav {
@@ -11,7 +16,7 @@ display: block;
 top: 0;
 width: 100%;
 font-family: "Trebuchet MS", sans-serif;
-background-color: lightblue;
+background-color: navajowhite;
 align-items: center;
 height: 3rem;
 }
@@ -91,7 +96,40 @@ div {width: 100%;}
     text-align: center;
   }
 
-body {
-    font-family: "Trebuchet MS", sans-serif;
-    background-color: aliceblue;
+.form-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.info-container {
+  text-align: center;
+}
+
+.information {
+  margin-top: 5%;
+}
+
+iframe {
+  margin-top: 2.5%;
 }
