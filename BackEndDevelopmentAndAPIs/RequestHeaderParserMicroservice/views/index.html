@@ -1,34 +1,35 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Header Parser Microservice</title>
+  <link href="output.css" rel="stylesheet">
+</head>
 
-   <head>
-      <title>Request Header Parser</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+<body class="bg-orange-100">
+  <div class="container mx-auto p-2 md:p-6 lg:p-8">
+    <h1 class="text-2xl md:text-4xl font-bold text-orange-500 mb-4">Request Header Parser Microservice</h1>
 
-   <body>
-      <div class="container">
-        <h2>Request Header Parser Microservice</h2>
+    <div class="mb-4 md:mb-8">
+      <h2 class="text-lg md:text-xl font-semibold mb-2">Example Usage:</h2>
+      <p>
+        <a href="api/whoami" class="text-orange-500 hover:underline">[base url]/api/whoami</a>
+      </p>
+    </div>
 
-        <h3>Example Usage:</h3>
-        <p>
-          <a href="api/whoami">[base url]/api/whoami</a>
-        </p>
-
-        <h3>Example Output:</h3>
-        <p>
-          <code>{"ipaddress":"::ffff:159.20.14.100","language":"en-US,en;q=0.5",<br>"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}</code>
-        </p>
-      </div>
-      <div class="footer">
-        <p>
-          by <a href="https://www.freecodecamp.org">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
-
+    <div class="">
+      <h2 class="text-lg md:text-xl font-semibold mb-2">Example Output:</h2>
+      <p class="bg-orange-200 p-2 md:p-2 rounded-md text-sm font-mono">
+        {
+        "ipaddress": "::ffff:159.20.14.100",
+        "language": "en-US,en;q=0.5",
+        "software": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+        }
+      </p>
+    </div>
+  </div>
+</body>
 
 </html>
