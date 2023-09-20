@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -p build:*",
-    "build:css": "npx tailwindcss -i ./public/input.css -o ./public/output.css --watch --postcss",
+    "build:css": "npx tailwindcss -i ./public/input.css -o ./public/output.css --watch",
     "build:index": "node index.js"
   },
   "dependencies": {
