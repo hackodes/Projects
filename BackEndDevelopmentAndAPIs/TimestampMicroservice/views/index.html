@@ -1,32 +1,40 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timestamp Microservice</title>
+  <link href="output.css" rel="stylesheet" type="text/css">
+</head>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h3>Example Usage:</h3>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
+<body class="bg-purple-100">
+  <div class="container mx-auto p-2 md:p-6 lg:p-8">
+    <h1 class="text-2xl md:text-4xl font-bold text-purple-500 mb-4">Timestamp Microservice</h1>
 
-      <h3>Example Output:</h3>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
+
+    <div class="container ">
+      <section class="mb-4 md:mb-8">
+        <h2 class="text-lg md:text-xl font-semibold mb-2">Example Usage:</h2>
+        <p>
+          <a href="api/2015-12-25" class="text-purple-500 hover:underline">[project url]/api/2015-12-25</a>
+        </p>
+        <p>
+          <a href="api/1451001600000" class="text-purple-500 hover:underline">[project url]/api/1451001600000</a>
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg md:text-xl font-semibold mb-2">Example Output:</h2>
+        <p class="bg-purple-200 p-2 md:p-4 rounded-md text-sm font-mono">
+          {
+          "unix": 1451001600000,
+          "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
+          }
+        </p>
+      </section>
     </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
