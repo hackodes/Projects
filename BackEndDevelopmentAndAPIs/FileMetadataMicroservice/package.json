@@ -4,13 +4,17 @@
   "description": "API project for freeCodeCamp",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+		"start": "npm-run-all -p build:*",
+		"build:css": "npx tailwindcss -i ./public/input.css -o ./public/output.css --watch",
+		"build:index": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.3.3"
   },
   "repository": {
     "type": "git",
