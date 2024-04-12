@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Metric/Imperial Converter</title>
+  <meta name="description" content="An example of the Free Code Camp Metric/Imperial Converter Project">
+  <link id="favicon" rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+    type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./public/output.css">
+</head>
+
+<body class="bg-amber-100">
+  <header class="text-center py-8">
+    <h1 class="md:text-3xl text-2xl font-bold text-amber-700">Metric/Imperial Converter</h1>
+  </header>
+  <section class="container mx-auto px-4">
+    <div class="mb-4 p-4 ">
+      <h3 class="text-xl font-semibold mb-4">Example usage</h3>
+      <div class="grid gap-2">
+        <code
+          class="block text-amber-700 hover:underline"><a href="api/convert/?input=4gal">/api/convert?input=4gal</a></code>
+        <code
+          class="block text-amber-700 hover:underline"><a href="api/convert/?input=1/2km">/api/convert?input=1/2km</a></code>
+        <code
+          class="block text-amber-700 hover:underline"><a href="api/convert/?input=5.4/3lbs">/api/convert?input=5.4/3lbs</a></code>
+        <code
+          class="block text-amber-700 hover:underline"><a href="api/convert?input=kg">/api/convert?input=kg</a></code>
+      </div>
+    </div>
+    <div class="mb-8 p-4">
+      <h3 class="text-xl font-semibold mb-4">Example return</h3>
+      <code
+        class="block bg-amber-200 p-2 md:p-4 rounded-md text-sm font-mono">{ initNum: 3.1, initUnit: 'mi', returnNum: 4.98895, returnUnit: 'km', string: '3.1 miles converts to 4.98895 kilometers' }</code>
+    </div>
+  </section>
+  <section class="container mx-auto px-4">
+    <div id="testui" class="p-4">
+      <h3 class="text-xl font-semibold mb-4">Front-End</h3>
+      <form id="convertForm" class="flex items-center">
+        <input type="text" id="convertField" name="input" placeholder="3.1mi" class="px-4 py-2 mr-2 rounded-md">
+        <input id="convert" type="submit" value="Convert!"
+          class="px-6 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800 cursor-pointer">
+      </form>
+      <p id="result" class="mt-4"></p>
+      <code id="jsonResult" class="block mt-4"></code>
+    </div>
+  </section>
+  <!-- Your web-app is https, so your scripts need to be too -->
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+    integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('#convertForm').submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+          url: '/api/convert',
+          type: 'get',
+          data: $('#convertForm').serialize(),
+          success: function (data) {
+            $('#result').text(data.string || data);
+            $('#jsonResult').text(JSON.stringify(data));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
