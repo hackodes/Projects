@@ -1,10 +1,11 @@
 function ConvertHandler() {
   this.getNum = function (input) {
-    let regex = /([.\d\/]+)([a-zA-Z]+)/;
+    const regex = /([.\d\/]+)([a-zA-Z]+)/;
     let match = input.match(regex);
     let result = match ? match[1] : "1";
     
     const nums = result.split("/");
+    
     let numerator = nums.length <= 2 ? nums[0] : undefined;
     let denominator = nums.length <= 2 ? (nums[1] || "1") : undefined;
   
@@ -12,16 +13,17 @@ function ConvertHandler() {
       return undefined;
     }
     
-    result = numerator / denominator;
+    result = parseFloat(numerator) / parseFloat(denominator);
     return result;
   };
 
   this.getUnit = function (input) {
-    let regex = /([.\d\/]+)([a-zA-Z]+)/;
+    const regex = /[a-zA-Z]+/g;
     let match = input.match(regex);
+    let string = match ? match[0] : "";
   
-    let unit = match ? match[2].toLowerCase() : "";
-
+    let unit = string.toLowerCase();
+  
     const units = { km: "km", gal: "gal", lbs: "lbs", mi: "mi", l: "L", kg: "kg" };
     return units[unit] || undefined;
   };
@@ -41,8 +43,9 @@ function ConvertHandler() {
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
 
+    initNum = initNum ? eval(initNum) : 1;
     let unit = initUnit.toLowerCase();
-
+ 
     const unitConversions = {
       "km": (num) => num / miToKm,
       "gal": (num) => num * galToL,
@@ -53,7 +56,7 @@ function ConvertHandler() {
     }
     
     let result = unitConversions[unit] ? unitConversions[unit](initNum) : undefined;
-    return result !== undefined ? parseFloat(result.toFixed(5)) : undefined;
+    return parseFloat(result.toFixed(5));
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {
