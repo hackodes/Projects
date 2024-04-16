@@ -4,9 +4,12 @@ const translateHandler = async () => {
   const localeArea = document.getElementById("locale-select");
   const errorArea = document.getElementById("error-msg");
   const translatedArea = document.getElementById("translated-sentence");
+  const solutionContainer = document.getElementById("solution-container");
+
+  solutionContainer.classList.remove("hidden");
   
-  errorArea.innerText = "";
-  translatedArea.innerText = "";
+  errorArea.innerText = "Error message will appear here...";
+  translatedArea.innerText = "Translated sentence will appear here...";
 
   const data = await fetch("/api/translate", {
     method: "POST",
