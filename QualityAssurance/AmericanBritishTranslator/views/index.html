@@ -12,18 +12,22 @@
   <link href="../public/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-sky-100 flex flex-col justify-center items-center">
-  <header class="mb-8 p-6">
-    <h1 class="text-2xl md:text-4xl font-bold text-sky-500 mb-4">American / British English Translator</h1>
+<body class="bg-sky-50 flex flex-col justify-center items-center">
+  <header class="mb-4 p-6">
+    <h1 class="text-2xl md:text-4xl font-bold text-sky-500 mt-4">American / British English Translator</h1>
   </header>
+
   <div class="container mx-auto flex flex-col md:flex-row justify-center items-start md:items-stretch p-4">
-    <div class="w-full md:w-1/2 bg-sky-50 border border-gray-300 p-2 rounded md:mr-4 mb-4 md:mb-0">
+    <div class="w-full md:w-1/2 bg-sky-200 border-sky-500 border-dashed border-4 p-2 rounded md:mr-4 mb-4 md:mb-0">
       <div class="flex flex-col space-y-2">
-        <p class="font-semibold mb-2">Input Text</p>
-        <textarea rows="10" cols="60" id="text-input" class="p-2 border border-gray-300 rounded text-sm font-mono"
+        <p class="font-bold text-xl mb-2">Input Text</p>
+        <textarea rows="10" cols="60" id="text-input"
+          class="p-2 rounded text-sm font-mono border-4 border-dashed border-gray-300 focus:border-sky-500 focus:bg-sky-50 outline-none  min-w-[200px] min-h-[100px]  max-h-[400px]"
           placeholder="Enter text..."></textarea>
+
+
         <div class="flex items-center space-x-3 text-sm">
-          <select id="locale-select" class="p-1 border border-gray-300 rounded">
+          <select id="locale-select" class="p-1 rounded outline-none">
             <option value="american-to-british">American to British</option>
             <option value="british-to-american">British to American</option>
           </select>
@@ -32,14 +36,14 @@
         </div>
       </div>
     </div>
-    <div id="output-container" class="w-full md:w-1/2 bg-sky-50 border border-gray-300 p-2 rounded">
-      <p class="font-semibold mb-4">Translated Sentence:</p>
+    <div id="output-container" class="w-full md:w-1/2  bg-sky-200 border-sky-500 border-dashed border-4 p-2 rounded">
+      <p class="font-bold text-xl mb-4">Translated Sentence</p>
       <div id="solution-container" class="hidden">
         <div id="translated-sentence"
-          class="mt-2 bg-white border border-gray-300 p-2 md:p-4 rounded-md text-sm font-mono">
+          class="mt-2 bg-white border-dashed border-4 hover:border-sky-500 hover:bg-sky-50 border-gray-300 p-2 md:p-4 rounded-md text-sm font-mono">
         </div>
         <div id="error-msg"
-          class="text-red-600 border border-red-300 mt-2 bg-red-200 p-2 md:p-4 rounded-md text-sm font-mono">
+          class="text-red-600 border-dashed border-4 hover:border-red-500 hover:bg-red-300 border-red-300 mt-2 bg-red-200 p-2 md:p-4 rounded-md text-sm font-mono">
         </div>
       </div>
     </div>
