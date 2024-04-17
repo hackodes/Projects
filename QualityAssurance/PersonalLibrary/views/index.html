@@ -1,70 +1,102 @@
 <html>
+
 <head>
   <title>Personal Library</title>
   <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/public/style.css">
-  <style>
-    code {
-      background-color: whitesmoke;
-    }
-  </style>
+  <link rel="stylesheet" href="/public/output.css">
 </head>
-<body>
-<header>
-  <h1>Personal Library</h1>
-</header>
-<br>
-<div id ='sampleposting'>
-  <h2 style="text-align: left">Test API responses</h2>
-  <form action="/api/books" method="post" class="border">
-    <h4>Test post to /api/books</h4>
-    <label for="title" >Book Title</label>
-    <input type="text" id="title" name="title" value=""><br>
-    <input type="submit" value="Submit">
-  </form>
-  <form action="" method="post" id="commentTest" class="border">
-    <h4>Test post to /api/books/{bookid}</h4>
-    <label for="idinputtest">BookId to comment on</label>
-    <input type="text" name="id" value="" id="idinputtest"><br>
-    <label for="comment">Comment</label>
-    <input type="text" id="comment" name="comment" value=""><br>
-    <input type="submit" value="Submit">
-  </form>
-</div>
-<hr style='margin: 50px'>
-<div id='sampleui'>
-  <h2 style="text-align: left">Sample Front-End</h2>
-  <form id="newBookForm" class="border">
-    <label for="bookTitleToAdd">New Book Title</label>
-    <input type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick" style="width: 295px">
-    <button type="submit" value="Submit" id="newBook">Submit New Book!</button>
-  </form>
-  <div id='display'></div>
-  <div id='bookDetail' class='border'>
-    <p id='detailTitle'>Select a book to see it's details and comments</p>
-    <ol id='detailComments'></ol>
-  </div>
-  <button id='deleteAllBooks'>Delete all books...</button>
-</div>
-<hr style='margin: 50px'>
 
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"
-        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-        crossorigin="anonymous"></script>
-<script src="/public/client.js"></script>
-<script>
-  /*
-  *  For #sampleposting to update form action url to test inputs book id
-  */
-  $(function() {
-    $('#commentTest').submit(function(){
-      let  id = $('#idinputtest').val();
-      $(this).attr('action', "/api/books/" + id);
+<body class="bg-lime-100 min-h-screen flex flex-col justify-center items-center p-2">
+  <header class="mb-4">
+    <h1 class="text-3xl md:text-4xl font-bold text-lime-500 mb-4 mt-4">Personal Library</h1>
+  </header>
+
+  <hr class="w-full border-dashed border-2 border-lime-300 mb-8">
+
+  <div id='sampleposting' class="w-full max-w-md bg-lime-300 rounded-md p-4 mb-8">
+    <h2 class="text-lg font-bold mb-4">Test API responses</h2>
+    <form action="/api/books" method="post">
+
+      <label for="title" class="block">Book Title</label>
+      <input type="text" id="title" name="title" value="" class="w-full border rounded py-2 px-3 mb-3">
+      <div class="flex flex-col items-end">
+        <h4 class="text-sm mb-2 font-normal">Test post to <span class="font-mono">/api/books</span></h4>
+        <div class="flex justify-end">
+          <button type="submit"
+            class="bg-lime-600 hover:bg-lime-700 text-white font-bold px-4 py-2 rounded-md focus:outline-none focus:shadow-outline">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form action="" method="post" id="commentTest" class="mt-4">
+      <label for="idinputtest" class="block">BookId to comment on</label>
+      <input type="text" name="id" value="" id="idinputtest" class="w-full border rounded py-2 px-3 mb-3">
+      <label for="comment" class="block">Comment</label>
+      <input type="text" id="comment" name="comment" value="" class="w-full border rounded py-2 px-3 mb-3">
+      <div class="flex flex-col items-end">
+        <h4 class="text-sm font-normal mb-2">Test post to <span class="font-mono">/api/books/{bookid}</span></h4>
+        <div class="flex justify-end">
+          <button type="submit"
+            class="bg-lime-600 hover:bg-lime-700 text-white font-bold px-4 py-2 rounded-md focus:outline-none focus:shadow-outline">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <hr class="w-full border-dashed border-2 border-lime-300 mb-8">
+
+  <div id='sampleui' class="w-full max-w-md bg-lime-300  rounded-md p-4 mb-8">
+    <h2 class="text-lg font-bold mb-4">Sample Front-End</h2>
+    <form id="newBookForm" class="mb-4">
+      <label for="bookTitleToAdd" class="block">New Book Title</label>
+      <input type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick"
+        class="w-full border rounded py-2 px-3 mb-3">
+      <div class="flex justify-end">
+        <button type="submit"
+          class="bg-lime-600 hover:bg-lime-700 text-white font-bold px-4 py-2 rounded-md focus:outline-none focus:shadow-outline">
+          Submit New Book!
+        </button>
+      </div>
+    </form>
+
+    <div id='display'></div>
+
+    <div id='bookDetail' class='bg-lime-400 border-dotted border-4 p-4 border-lime-500 rounded-md mb-4'>
+      <p id='detailTitle' class="font-semibold mb-2 ">Select a book to see its details and comments</p>
+      <ol id='detailComments'></ol>
+    </div>
+
+    <div class="flex justify-end">
+      <button id='deleteAllBooks'
+        class="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-2 rounded-md focus:outline-none focus:shadow-outline">
+        Delete all books...
+      </button>
+    </div>
+  </div>
+
+  <hr class="w-full border-lime-300 border-dashed border-2 mb-4">
+
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+    integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+  <script src="/public/client.js"></script>
+  <script>
+    /*
+    *  For #sampleposting to update form action url to test inputs book id
+    */
+    $(function () {
+      $('#commentTest').submit(function () {
+        let id = $('#idinputtest').val();
+        $(this).attr('action', "/api/books/" + id);
+      });
     });
-  });
-</script>
+  </script>
 </body>
+
 </html>
