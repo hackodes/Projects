@@ -21,7 +21,8 @@
     <form action="/api/books" method="post">
 
       <label for="title" class="block">Book Title</label>
-      <input type="text" id="title" name="title" value="" class="w-full border rounded py-2 px-3 mb-3">
+      <input type="text" id="title" name="title" value=""
+        class="w-full rounded py-2 px-3 mb-3 border-4 border-double border-gray-300 focus:border-lime-400 focus:bg-lime-100 outline-none">
       <div class="flex flex-col items-end">
         <h4 class="text-sm mb-2 font-normal">Test post to <span class="font-mono">/api/books</span></h4>
         <div class="flex justify-end">
@@ -35,9 +36,11 @@
 
     <form action="" method="post" id="commentTest" class="mt-4">
       <label for="idinputtest" class="block">BookId to comment on</label>
-      <input type="text" name="id" value="" id="idinputtest" class="w-full border rounded py-2 px-3 mb-3">
+      <input type="text" name="id" value="" id="idinputtest"
+        class="w-full rounded py-2 px-3 mb-3 border-4 border-double border-gray-300 focus:border-lime-400 focus:bg-lime-100 outline-none">
       <label for="comment" class="block">Comment</label>
-      <input type="text" id="comment" name="comment" value="" class="w-full border rounded py-2 px-3 mb-3">
+      <input type="text" id="comment" name="comment" value=""
+        class="w-full  rounded py-2 px-3 mb-3 border-4 border-double border-gray-300 focus:border-lime-400 focus:bg-lime-100 outline-none">
       <div class="flex flex-col items-end">
         <h4 class="text-sm font-normal mb-2">Test post to <span class="font-mono">/api/books/{bookid}</span></h4>
         <div class="flex justify-end">
@@ -57,7 +60,7 @@
     <form id="newBookForm" class="mb-4">
       <label for="bookTitleToAdd" class="block">New Book Title</label>
       <input type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick"
-        class="w-full border rounded py-2 px-3 mb-3">
+        class="w-full rounded py-2 px-3 mb-3 border-4 border-double border-gray-300 focus:border-lime-400 focus:bg-lime-100 outline-none">
       <div class="flex justify-end">
         <button type="submit"
           class="bg-lime-600 hover:bg-lime-700 text-white font-bold px-4 py-2 rounded-md focus:outline-none focus:shadow-outline">
