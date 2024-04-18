@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Issue Tracker</title>
-    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/public/style.css">
-  </head>
-  <body>
-    <header>
-      <h1>
-        Issue Tracker
-      </h1>
-    </header>
-    <section style="margin: 0 50px;">
-      <h3>Example <code>GET</code> usage</h3>
-      <code>/api/issues/{project}</code><br>
-      <code>/api/issues/{project}?open=true&amp;assigned_to=Joe</code><br>
-      <h3>Example return</h3>
-      <pre>
-<code>[
+
+<head>
+  <title>Issue Tracker</title>
+  <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../public/output.css">
+</head>
+
+<body class="font-sans bg-pink-100">
+  <header class="mb-4 p-6">
+    <h1 class="text-2xl md:text-4xl font-bold text-pink-500 mt-4 text-center"> Issue Tracker </h1>
+  </header>
+
+  <hr class="mx-auto border-dashed border-2 border-pink-500 max-w-2xl my-8" />
+
+  <section class="container mx-auto px-4 py-2">
+    <div class="max-w-2xl mx-auto">
+      <h3 class="text-lg font-semibold mb-4"> Example <code>GET</code> usage </h3>
+      <p class="text-pink-500 hover:underline">
+        <code>/api/issues/{project}</code>
+      </p>
+      <p class="text-pink-500 hover:underline">
+        <code>/api/issues/{project}?open=true&amp;assigned_to=Joe</code>
+      </p>
+      <h3 class="text-lg font-semibold mt-6 mb-4">Example return</h3>
+      <pre class="bg-pink-200 p-4 text-sm rounded-md"><code>[
   { 
     "_id": "5871dda29faedc3491ff93bb",
     "issue_title": "Fix error in posting data",
@@ -34,82 +41,134 @@
   },
   ...
  ]
-</code>
-</pre>
-    </section>
-    <hr style='margin: 0 50px'>
-    <section id='testui' style='margin-left: 50px;'>
-      <h3>Examples</h3>
-      Go to <a href='/api/issues/apitest/'><code>/api/issues/apitest/</code></a>  project
-      <h2 style="text-align: left">API Tests</h2>
-      <h3>Submit issue on <i>apitest</i></h3>
-      <form id="testForm" class="border">
-        <input type="text" name="issue_title" placeholder="*Title" style="width: 100px" required=''><br>
-        <textarea type="text" name="issue_text" placeholder="*Text" style="width: 100px" required=''></textarea><br>
-        <input type="text" name="created_by" placeholder="*Created by" style="width: 100px" required=''><br>
-        <input type="text" name="assigned_to" placeholder="(opt)Assigned to" style="width: 100px"><br>
-        <input type="text" name="status_text" placeholder="(opt)Status text" style="width: 100px"><br>
-        <button type="submit">Submit Issue</button>
-      </form><br>
-      <h3>Update issue on <i>apitest</i> (Change any or all to update issue on the _id supplied)</h3>
-      <form id="testForm2" class="border">
-        <input type="text" name="_id" placeholder="*_id" style="width: 100px" required=''><br>
-        <input type="text" name="issue_title" placeholder="(opt)Title" style="width: 100px"><br>
-        <textarea type="text" name="issue_text" placeholder="(opt)Text" style="width: 100px"></textarea><br>
-        <input type="text" name="created_by" placeholder="(opt)Created by" style="width: 100px"><br>
-        <input type="text" name="assigned_to" placeholder="(opt)Assigned to" style="width: 100px"><br>
-        <input type="text" name="status_text" placeholder="(opt)Status text" style="width: 100px"><br>
-        <label><input type="checkbox" name="open" value="false"> Check to close issue</label><br>
-        <button type="submit">Submit Issue</button>
-      </form><br>
-      <h3>Delete issue on <i>apitest</i></h3>
-      <form id="testForm3" class="border">
-        <input type="text" name="_id" placeholder="_id" style="width: 100px" required=''><br>
-        <button type="submit">Delete Issue</button>
+</code></pre>
+    </div>
+  </section>
+  <hr class="mx-auto border-dashed border-2 border-pink-500 max-w-2xl my-8" />
+
+  <section id="testui" class="container mx-auto px-4 py-2">
+    <div class="max-w-2xl mx-auto">
+      <h3 class="text-lg font-semibold mb-4">Examples</h3>
+      <p>
+        Go to
+        <a class="text-pink-500 hover:underline" href="/api/issues/apitest/"><code>/api/issues/apitest/</code></a>
+        project
+      </p>
+
+      <h2 class="text-xl font-semibold mt-6 mb-4">API Tests</h2>
+
+      <form id="testForm" class="bg-pink-300 border-dashed border-4 border-pink-400 rounded-md p-4 mb-8">
+
+        <h3 class="text-lg font-semibold mb-4">Submit issue on <i>apitest</i></h3>
+        <input type="text" name="issue_title" placeholder="*Title"
+          class="input-field block w-full rounded px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none"
+          required />
+        <textarea name="issue_text" placeholder="*Text"
+          class="input-field block w-full rounded px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none min-w-[200px] min-h-[100px] max-h-[250px]"
+          required></textarea>
+        <input type="text" name="created_by" placeholder="*Created by"
+          class="input-field block w-full border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none rounded px-2 py-2 mb-2"
+          required />
+        <input type="text" name="assigned_to" placeholder="(opt)Assigned to"
+          class="input-field block w-full border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none rounded px-2 py-2 mb-2" />
+        <input type="text" name="status_text" placeholder="(opt)Status text"
+          class="input-field block w-full border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none rounded px-2 py-2 mb-2" />
+        <div class="flex justify-end">
+          <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded mt-4">
+            Submit Issue
+          </button>
+        </div>
       </form>
-      <code id='jsonResult'></code>
-    </section>
-    <hr style='margin: 50px; margin-top: 200px'>
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script>
-      $(function() {
-        $('#testForm').submit(function(e) {
-          $.ajax({
-            url: '/api/issues/apitest',
-            type: 'post',
-            data: $('#testForm').serialize(),
-            success: function(data) {
-              $('#jsonResult').text(JSON.stringify(data));
-            }
-          });
-          e.preventDefault();
-        });
-        $('#testForm2').submit(function(e) {
-          $.ajax({
-            url: '/api/issues/apitest',
-            type: 'put',
-            data: $('#testForm2').serialize(),
-            success: function(data) {
-              $('#jsonResult').text(JSON.stringify(data));
-            }
-          });
-          e.preventDefault();
-        });
-        $('#testForm3').submit(function(e) {
-          $.ajax({
-            url: '/api/issues/apitest',
-            type: 'delete',
-            data: $('#testForm3').serialize(),
-            success: function(data) {
-              $('#jsonResult').text(JSON.stringify(data));
-            }
-          });
-          e.preventDefault();
-        });
-      });
-   </script>
-  </body>
+
+      <form id="testForm2" class="bg-pink-300 border-dashed border-4 border-pink-400 rounded-md p-4 mb-8">
+        <h3 class="text-lg font-semibold mb-4">
+          Update issue on <i>apitest</i>
+          <span class="font-thin text-base mb-4">(Change any or all to update issue on the _id supplied)
+          </span>
+        </h3>
+
+        <input type="text" name="_id" placeholder="*_id"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none"
+          required />
+        <input type="text" name="issue_title" placeholder="(opt)Title"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none" />
+        <textarea name="issue_text" placeholder="(opt)Text"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none min-w-[200px] min-h-[100px] max-h-[250px]"></textarea>
+        <input type="text" name="created_by" placeholder="(opt)Created by"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none" />
+        <input type="text" name="assigned_to" placeholder="(opt)Assigned to"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none" />
+        <input type="text" name="status_text" placeholder="(opt)Status text"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none" />
+        <label class="flex justify-end items-center mt-2">
+          <input type="checkbox" name="open" value="false" class="h-5 w-5 text-pink-600 accent-pink-500" />
+          <span class="ml-2 text-gray-700">Check to close issue</span>
+        </label>
+        <div class="flex justify-end">
+          <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded mt-4">
+            Submit Issue
+          </button>
+        </div>
+      </form>
+
+
+      <form id="testForm3" class="bg-pink-300 border-dashed border-4 border-pink-400 rounded-md p-4 mb-8">
+        <h3 class="text-lg font-semibold mb-4">Delete issue on <i>apitest</i></h3>
+        <input type="text" name="_id" placeholder="_id"
+          class="input-field block w-full px-2 py-2 mb-2 border-4 border-solid border-gray-300 focus:border-pink-400 focus:bg-pink-100 outline-none"
+          required />
+        <div class="flex justify-end">
+          <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">Delete
+            Issue</button>
+        </div>
+      </form>
+
+      <code id="jsonResult"></code>
+    </div>
+  </section>
+
+
+  <hr class="mx-auto border-dashed border-2 border-pink-500 max-w-2xl my-4" />
+
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+    integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('#testForm').submit(function (e) {
+        $.ajax({
+          url: '/api/issues/apitest',
+          type: 'post',
+          data: $('#testForm').serialize(),
+          success: function (data) {
+            $('#jsonResult').text(JSON.stringify(data))
+          },
+        })
+        e.preventDefault()
+      })
+      $('#testForm2').submit(function (e) {
+        $.ajax({
+          url: '/api/issues/apitest',
+          type: 'put',
+          data: $('#testForm2').serialize(),
+          success: function (data) {
+            $('#jsonResult').text(JSON.stringify(data))
+          },
+        })
+        e.preventDefault()
+      })
+      $('#testForm3').submit(function (e) {
+        $.ajax({
+          url: '/api/issues/apitest',
+          type: 'delete',
+          data: $('#testForm3').serialize(),
+          success: function (data) {
+            $('#jsonResult').text(JSON.stringify(data))
+          },
+        })
+        e.preventDefault()
+      })
+    })
+  </script>
+</body>
+
 </html>
