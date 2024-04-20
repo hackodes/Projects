@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cash Register</h1>
+        <div>
+            <div class="total-price">
+                <p>Total: $19.5</p>
+            </div>
+            <p>Enter cash from customer:</p>
+            <div class="input-group">
+                <input id="cash" type="text" autocomplete="off" />
+                <button id="purchase-btn">Purchase</button>
+            </div>
+
+        </div>
+        <div class="cash-register-info">
+            <h4 class="underline">Change in drawer</h4>
+            <p>Penny: $1.01</p>
+            <p>Nickel: $2.05</p>
+            <p>Dime: $3.1</p>
+            <p>Quarter: $4.25</p>
+            <p>One: $90.00</p>
+            <p>Five: $55.00</p>
+            <p>Ten: $20.00</p>
+            <p>Twenty: $60.00</p>
+            <p>One Hundred: $100.00</p>
+        </div>
+        <div id="change-due">
+            <p>---</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

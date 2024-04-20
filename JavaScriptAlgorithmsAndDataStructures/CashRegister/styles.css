@@ -1,0 +1,149 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #d5dfe5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #a5bdc8;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3f7cac;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2e6894;
+}
+
+#change-due {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+#change-due p {
+    margin: 5px 0;
+}
+
+.total-price {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cash-register-info {
+    margin-top: 20px;
+    background-color: #fef2b0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cash-register-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.cash-register-info h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.underline {
+    margin-top: 0px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+    text-align: center;
+}
+
+.total-price {
+    text-align: center;
+    border-radius: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #e9c46a;
+    color: #333;
+    border: 2px solid #998650;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    overflow: hidden;
+}
+
+.total-price p {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .input-container p {
+        margin: 0;
+    }
+}
