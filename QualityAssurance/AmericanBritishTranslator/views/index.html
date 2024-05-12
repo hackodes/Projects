@@ -10,6 +10,7 @@
   <link id="favicon" rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
     type="image/x-icon">
   <link href="../public/output.css" rel="stylesheet">
+  <link href="../public/style.css" rel="stylesheet">
 </head>
 
 <body class="bg-sky-50 flex flex-col justify-center items-center">
@@ -18,7 +19,8 @@
   </header>
 
   <div class="container mx-auto flex flex-col md:flex-row justify-center items-start md:items-stretch p-4">
-    <div class="w-full md:w-1/2 bg-sky-200 border-sky-500 border-dashed border-4 p-2 rounded md:mr-4 mb-4 md:mb-0">
+    <div
+      class="w-full md:w-1/2 bg-sky-200 border-sky-500 border-dashed border-4 p-2 rounded md:mr-4 mb-4 md:mb-0 flex-1">
       <div class="flex flex-col space-y-2">
         <p class="font-bold text-xl mb-2">Input Text</p>
         <textarea rows="10" cols="60" id="text-input"
@@ -36,16 +38,17 @@
         </div>
       </div>
     </div>
-    <div id="output-container" class="w-full md:w-1/2  bg-sky-200 border-sky-500 border-dashed border-4 p-2 rounded">
+    <div id="output-container flex-1"
+      class="w-full md:w-1/2  bg-sky-200 border-sky-500 border-dashed border-4 p-2 rounded flex flex-col">
       <p class="font-bold text-xl mb-4">Translated Sentence</p>
-      <div id="solution-container" class="hidden">
-        <div id="translated-sentence"
-          class="mt-2 bg-white border-dashed border-4 hover:border-sky-500 hover:bg-sky-50 border-gray-300 p-2 md:p-4 rounded-md text-sm font-mono">
+      <div id="solution-container"
+        class="bg-yellow-100 border-dashed border-4 border-yellow-300 hover:border-yellow-400 hover:bg-yellow-200 rounded-md w-full h-full">
+        <div id="translated-sentence" class="p-2 md:p-4 rounded-md text-sm font-mono">
         </div>
-        <div id="error-msg"
-          class="text-red-600 border-dashed border-4 hover:border-red-500 hover:bg-red-300 border-red-300 mt-2 bg-red-200 p-2 md:p-4 rounded-md text-sm font-mono">
+        <div id="error-msg" class="text-red-600  p-2 md:p-4 rounded-md text-sm font-mono">
         </div>
       </div>
+
     </div>
   </div>
   <script src="../public/index.js"></script>
