@@ -4,7 +4,8 @@ import port_scanner
 print("***Tests***")
 class UnitTests(unittest.TestCase):
     def test_port_scanner_ip(self):
-        ports = port_scanner.get_open_ports("209.216.230.240", [440, 445], False)
+        # ports = port_scanner.get_open_ports("209.216.230.240", [440, 445], False) - Unreachable on 2024-11-10
+        ports = port_scanner.get_open_ports("www.freecodecamp.org", [440, 445], False)
         actual = ports
         expected = [443]
         self.assertEqual(actual, expected, 'Expected scanning ports of IP address to return [443].')
