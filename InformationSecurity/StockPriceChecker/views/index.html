@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Stock Price Checker</title>
-    <link
-      id="favicon"
-      rel="icon"
-      href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
-      type="image/x-icon"
-    />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./public/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>ISQA_5 - Nasdaq Stock Price Checker</h1>
-    </header>
-    <div id="userstories">
-      <h3>Example usage:</h3>
+
+<head>
+  <title>Stock Price Checker</title>
+  <link id="favicon" rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+    type="image/x-icon" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/public/output.css">
+</head>
+
+<body class="bg-sky-900 font-sans text-sky-100">
+
+  <header class="mb-4 p-6">
+    <h1 class="text-2xl md:text-4xl font-bold text-sky-300 mt-4 text-center">
+      ISQA_5 - Nasdaq Stock Price Checker
+    </h1>
+  </header>
+
+  <section id="userstories" class="container mx-auto px-4 py-4 max-w-4xl">
+    <h3 class="text-lg font-semibold mb-4">Example usage:</h3>
+    <p class="text-sky-400 hover:underline">
       <code>/api/stock-prices?stock=GOOG</code>
-      <br />
+    </p>
+    <p class="text-sky-400 hover:underline">
       <code>/api/stock-prices?stock=GOOG&amp;like=true</code>
-      <br />
+    </p>
+    <p class="text-sky-400 hover:underline">
       <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT</code>
-      <br />
+    </p>
+    <p class="text-sky-400 hover:underline">
       <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT&amp;like=true</code>
-      <br />
-      <h3>Example return:</h3>
-      <code>{"stockData":{"stock":"GOOG","price":786.90,"likes":1}}</code>
-      <br />
-      <code>
-        {"stockData":[{"stock":"MSFT","price":62.30,"rel_likes":-1},{"stock":"GOOG","price":786.90,"rel_likes":1}]}
-      </code>
+    </p>
+
+    <h3 class="text-lg font-semibold mt-6 mb-4">Example return:</h3>
+    <div class="bg-sky-800 p-4 rounded-md text-sm font-mono text-sky-100">
+      <pre class="bg-sky-900 p-4 rounded-md overflow-x-auto whitespace-pre-wrap mb-4">
+        <code class="block text-sky-300">{"stockData":{"stock":"GOOG","price":786.90,"likes":1}}</code>
+      </pre>
+      <pre class="bg-sky-900 p-4 rounded-md overflow-x-auto whitespace-pre-wrap">
+        <code class="block text-sky-300">{"stockData":[{"stock":"MSFT","price":62.30,"rel_likes":-1},{"stock":"GOOG","price":786.90,"rel_likes":1}]}</code>
+      </pre>
     </div>
-    <hr class="p-50" />
-    <div id="testui">
-      <h2 class="text-align-left">Front-End:</h2>
-      <h3>Get single price and total likes</h3>
-      <form id="testForm2" class="border">
-        <input type="text" name="stock" placeholder="GOOG" required="" />
-        <input type="checkbox" name="like" value="true" /> Like?
-        <br />
-        <button type="submit">Get Price!</button>
-      </form>
-      <h3>Compare and get relative likes</h3>
-      <form id="testForm" class="border">
-        <input type="text" name="stock" placeholder="GOOG" required="" />
-        <input type="text" name="stock" placeholder="MSFT" required="" />
-        <input type="checkbox" name="like" value="true" /> Like both?
-        <br />
-        <button type="submit">Get Price!</button>
-      </form>
-      <code id="jsonResult"></code>
+
+  </section>
+
+  <hr class="mx-auto border-dashed border-2 border-sky-500 max-w-3xl my-8" />
+
+  <section id="testui" class="container mx-auto px-4 py-2 max-w-3xl">
+    <h2 class="text-xl font-semibold mb-4 text-left">Front-End:</h2>
+
+    <h3 class="text-lg font-semibold mb-4">Get single price and total likes</h3>
+    <form id="testForm2" class="bg-sky-700 border-dashed border-4 border-sky-600 rounded-md p-4 mb-8">
+      <input type="text" name="stock" placeholder="GOOG" required
+        class="block w-full px-2 py-2 mb-2 rounded border-4 border-gray-300 focus:border-sky-500 focus:bg-sky-200 outline-none text-sky-900" />
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" name="like" value="true" class="h-5 w-5 text-sky-600 accent-sky-500" />
+        <span class="text-gray-200">Like?</span>
+      </label>
+      <div class="flex justify-end">
+        <button type="submit" class="bg-sky-600 hover:bg-sky-500 text-white font-semibold py-2 px-4 rounded mt-4">
+          Get Price!
+        </button>
+      </div>
+    </form>
+
+    <h3 class="text-lg font-semibold mb-4">Compare and get relative likes</h3>
+    <form id="testForm" class="bg-sky-700 border-dashed border-4 border-sky-600 rounded-md p-4 mb-8">
+      <input type="text" name="stock" placeholder="GOOG" required
+        class="block w-full px-2 py-2 mb-2 rounded border-4 border-gray-300 focus:border-sky-500 focus:bg-sky-200 outline-none text-sky-900" />
+      <input type="text" name="stock" placeholder="MSFT" required
+        class="block w-full px-2 py-2 mb-2 rounded border-4 border-gray-300 focus:border-sky-500 focus:bg-sky-200 outline-none text-sky-900" />
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" name="like" value="true" class="h-5 w-5 text-sky-600 accent-sky-500" />
+        <span class="text-gray-200">Like both?</span>
+      </label>
+      <div class="flex justify-end">
+        <button type="submit" class="bg-sky-600 hover:bg-sky-500 text-white font-semibold py-2 px-4 rounded mt-4">
+          Get Price!
+        </button>
+      </div>
+    </form>
+
+    <div class="bg-sky-800 p-4 rounded-md text-sm font-mono text-sky-100">
+      <pre id="jsonResult"
+        class="bg-sky-900 text-sky-300 p-4 text-sm font-mono rounded-md whitespace-pre-wrap overflow-x-auto mt-2 shadow-lg">
     </div>
-    <hr class="m-50 mt-200" />
-    <script src="/public/script.js"></script>
-  </body>
+  </pre>
+
+  </section>
+
+  <hr class="mx-auto border-dashed border-2 border-sky-500 max-w-3xl my-8" />
+
+  <script src="/public/script.js"></script>
+</body>
+
 </html>
