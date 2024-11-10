@@ -3,7 +3,7 @@ require('dotenv').config();
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const cors        = require('cors');
-
+const helmetJS    = require('helmet');
 const apiRoutes         = require('./routes/api.js');
 const fccTestingRoutes  = require('./routes/fcctesting.js');
 const runner            = require('./test-runner');
@@ -14,8 +14,23 @@ app.use('/public', express.static(process.cwd() + '/public'));
 
 app.use(cors({origin: '*'})); //For FCC testing purposes only
 
+app.use(helmetJS({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'"]
+    }
+  }
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+require('dotenv').config()
+
+const mongoose = require('mongoose')
+mongoose.connect(process.env.connectionUrl)
 
 //Index page (static HTML)
 app.route('/')
