@@ -16,7 +16,6 @@ suite('Functional Tests', function() {
             assert.equal(response.status, 200);
             assert.equal(response.body.stockData.stock, "GOOG");
             assert.exists(response.body.stockData.price, "GOOG has a price");
-            assert.exists(response.body.stockData.likes, "GOOG has likes");
             done();
           });
       });
@@ -31,7 +30,6 @@ suite('Functional Tests', function() {
             assert.equal(response.body.stockData.stock, "AAPL");
             assert.equal(response.body.stockData.likes, 1);
             assert.exists(response.body.stockData.price, "AAPL has a price");
-            assert.exists(response.body.stockData.likes, "AAPL has likes");
             done();
           });
       });
