@@ -3,12 +3,22 @@ require('dotenv').config();
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const cors        = require('cors');
+const helmet      = require('helmet');
 
 const apiRoutes         = require('./routes/api.js');
 const fccTestingRoutes  = require('./routes/fcctesting.js');
 const runner            = require('./test-runner');
 
 const app = express();
+
+const mongoose = require('mongoose');
+mongoose.connect(process.env.connectionUrl);
+
+app.use(helmet.referrerPolicy({
+  policy: "same-origin"
+}))
+app.use(helmet.frameguard());
+app.use(helmet.dnsPrefetchControl());
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
