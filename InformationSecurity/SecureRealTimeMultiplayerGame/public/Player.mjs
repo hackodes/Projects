@@ -45,9 +45,9 @@ class Player {
   }
 
   calculateRank(arr) {
-    arr.sort((a, b) => b.score - a.score)
-    let position = arr.findIndex((obj) => obj.id === this.id) + 1
-    return `Rank: ${position}/${arr.length}`
+    const sortedArr = arr.slice().sort((a, b) => b.score - a.score)
+    const position = sortedArr.findIndex((obj) => obj.id === id) + 1
+    return position === 1 ? "1st" : position === 2 ? "2nd" : position === 3 ? "3rd" : `${position}th`
   }
 }
 
